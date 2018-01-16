@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+<title></title>
+
+<head>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+
+Highcharts.chart('container', {
+  chart: {
+
+    type: 'columnrange',
+
+    inverted: true
+
+  },
+
+  
+  title: {
+
+    text: '台北市 各區每坪單價區間'
+
+  },
+
+  
+
+
+  
+subtitle: {
+
+    text: '2015-2017'
+
+  },
+
+  
+  xAxis: {
+
+    categories: ['中正區', '大同區', '中山區', '松山區', '大安區', '萬華區', '信義區', '士林區', '北投區', '內湖區', '南港區', '文山區']
+
+  },
+
+  
+  yAxis: {
+
+    title: {
+
+      text: '單價(萬)'
+
+    }
+
+  },
+
+  
+  tooltip: {
+
+    valueSuffix: '萬'
+
+  },
+
+  
+  plotOptions: {
+
+    columnrange: {
+
+      dataLabels: {
+
+        enabled: true,
+
+        formatter: function() {
+
+          return this.y + '萬';
+
+        }
+
+      }
+
+    }
+
+  },
+
+  
+  legend: {
+
+    enabled: false
+
+  },
+
+  
+  series: [{
+
+    name: '最低價至最高價',
+
+    data: [
+
+      [5,111],
+
+      [36,65 ],
+
+      [21,213],
+
+      [28, 184],
+
+      [16, 245],
+
+      [16,70 ],
+
+      [20, 170],
+
+      [14,189],
+
+      [71,102],
+
+      [21,110],
+
+      [12,95],
+
+      [14,77]
+
+    ]
+
+  }]
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>

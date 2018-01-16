@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+
+<title></title>
+
+<head>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</head>
+
+<body>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+
+Highcharts.chart('container', {
+
+  chart: {
+
+    type: 'columnrange',
+
+    inverted: true
+
+  },
+
+  
+
+  title: {
+
+    text: '新北市 各區每坪單價區間'
+
+  },
+
+  
+
+
+
+  
+subtitle: {
+
+    text: '2015-2017'
+
+  },
+
+  
+
+  xAxis: {
+
+    categories: ['板橋區', '三重區', '中和區', '永和區', '新莊區', '新店區', '土城區', '蘆洲區', '汐止區', '樹林區', '鶯歌區', '三峽區', '淡水區', '瑞芳區', '五股區', '泰山區', '林口區', '八里區', '深坑區', '三芝區', '金山區', '萬里區']
+
+  },
+
+  
+
+  yAxis: {
+
+    title: {
+
+      text: '單價(萬)'
+
+    }
+
+  },
+
+  
+
+  tooltip: {
+
+    valueSuffix: '萬'
+
+  },
+
+  
+
+  plotOptions: {
+
+    columnrange: {
+
+      dataLabels: {
+
+        enabled: true,
+
+        formatter: function() {
+
+          return this.y + '萬';
+
+        }
+
+      }
+
+    }
+
+  },
+
+  
+
+  legend: {
+
+    enabled: false
+
+  },
+
+  
+
+  series: [{
+
+    name: '最低價至最高價',
+
+    data: [
+
+      [9, 63],
+
+      [16, 59],
+
+      [11, 66],
+
+      [9, 32],
+
+      [18, 31],
+
+      [6, 57],
+
+      [13, 43],
+
+      [11, 64],
+
+      [22, 68],
+
+      [8, 35],
+
+      [4, 23],
+
+      [7, 28]
+
+    ]
+
+  }]
+
+});
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
